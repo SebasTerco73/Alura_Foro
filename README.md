@@ -11,7 +11,17 @@ topicos con una base de datos relacional en mysql para persistir los datos y un 
 
 
 ## :hammer: Funcionalidades del proyecto
-- 
+- Post para crear un nuevo topico ingresando: titulo, mensaje, autor, curso. Para la fecha se usa el metodo now() de LocalDate y el estado del topico se inicia en true.
+  No pueden haber 2 topicos con el mismo titulo y mensaje.
+- Get para listar todos los topicos usando @PageableDefault para listar desde el mas actual al mas antiguo y mostrar 5 elementos por pagina
+- Get para detallar un topico por ID, usando la anotacion @PathVariable
+- Put para actualizar un topico
+- Delete para hacer un borrado logico de un topico
+- Anotacion @Valid para validar los datos ingresados
+- Pruebas hechas en Postman e Insomnia
+- Contraseña de usuarios guardadas usando Hash de BCrypt
+- JSON Web Token para la autenticacion y seguridad de la app 
+- SpringFox Swagger para generar una interfaz amigable y accesible
 
 ## :heavy_check_mark: Tecnologias utilizadas
 [![My Skills](https://skillicons.dev/icons?i=java,spring,hibernate,maven,idea,github,mysql,postman)](https://skillicons.dev)
