@@ -11,6 +11,7 @@ topicos con una base de datos relacional en mysql para persistir los datos y un 
 
 
 ## :hammer: Funcionalidades del proyecto
+- Migraciones para crear y modificar las tablas
 - Post para crear un nuevo topico ingresando: titulo, mensaje, autor, curso. Para la fecha se usa el metodo now() de LocalDate y el estado del topico se inicia en true.
   No pueden haber 2 topicos con el mismo titulo y mensaje.
 - Get para listar todos los topicos usando @PageableDefault para listar desde el mas actual al mas antiguo y mostrar 5 elementos por pagina
@@ -23,10 +24,35 @@ topicos con una base de datos relacional en mysql para persistir los datos y un 
 - JSON Web Token para la autenticacion y seguridad de la app 
 - SpringFox Swagger para generar una interfaz amigable y accesible
 
+## :books: Dependencias usadas
+   - Lombok
+   - Spring Web
+   - Spring Boot DevTools
+   - Spring Data JPA
+   - Flyway Migration
+   - MySQL Driver
+   - Validation
+   - Spring Security
+   - Auth0
+   - SpringFox Swagger
+   
 ## :heavy_check_mark: Tecnologias utilizadas
 [![My Skills](https://skillicons.dev/icons?i=java,spring,hibernate,maven,idea,github,mysql,postman)](https://skillicons.dev)
 
 ## :gear: Base de datos
-- MySQL
 - 2 tablas: Usuarios, topicos
+- **usuarios**
+  - **id**
+  - **login**
+  - **clave**
+    
+- **topicos**
+  - **id**
+  - **titulo**
+  - **mensaje**
+  - **fecha_creacion**
+  - **topico_status**
+  - **autor**
+  - **curso**
+
 
